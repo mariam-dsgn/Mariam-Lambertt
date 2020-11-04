@@ -8,36 +8,14 @@
 
 
 
-  div.background {
-  background: url(../Mariam-Lambertt/My References/my terrain.gif) ;
-   /*background-size: cover;*/
-    height: 100px;
-    padding:0;
-    margin:0;
-  }
 
- div.transbox {
-  margin: 30px;
-  background-color: #ffffff; 
-  border: 1px solid black;
-  opacity: 0.6;
-  width: 800px
-
-}
-
-div.transbox p {
-  margin: 5%;
-  font-weight: bold;
-  opacity: 100%
-  color: #000000;
-}
 
 
 
 
 /*TITLE*/
 	h1{
-	 font-size: 40px;
+	 font-size: 46px;
   font-weight: 700;
   color: #18206fff;
   letter-spacing: 0.25px;
@@ -119,8 +97,118 @@ div.transbox p {
 
 
 
+
+
+/*-------------------------FADING IMG------------------*/
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+
+
+/*-----------BACKY-------------------*/
+
+  div.background {
+  background: url(../Mariam-Lambertt/My references/my terrain_fixed) ;
+   /*background-size: cover;*/
+    height: 400px;
+    padding:0;
+    margin:0;
+  }
+
+ div.transbox {
+ margin: 0;
+
+  background-color: #ffffff; 
+  padding:5%;
+    opacity: 0;
+
+  width: 800px
+
+
+
+}
+
+div.transbox p {
+  margin: 5%;
+
+  font-weight: bold;
+  opacity: 100%
+  color: #000000;
+}
+
+
+
+
+
 /*BODY*/
+
+
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+
+ float: left;
+  width: 25%;
+  padding: 30px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 body{
+
 font-family: 'Peddana', serif;
 	background: #ffffffff;
 		color: #000000ff
@@ -133,7 +221,7 @@ font-family: 'Peddana', serif;
 }
 
 h3{
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 700;
   color: #18206fff;
   letter-spacing: 0.25px;
@@ -150,7 +238,13 @@ p{
   color: #18206fff;
   letter-spacing: 0.2px;
 }
-
+p1{
+  font-size: 14px;
+  line-height: 25px;
+  text-align: center;
+  color: #353535;
+  letter-spacing: 0.2px;
+}
 
 
 
@@ -204,16 +298,18 @@ p{
 /* Left column */
 .leftcolumn {
   float: left;
-  width: 60%;
+  width: 40%;
+
+  padding-right: 0;
 
 }
 
 /* Right column */
 .rightcolumn {
   float: right;
-  width: 25%;
-
-  padding-right: 75px;
+  width: 40%;
+margin-right: 200px
+  /*padding-right: 75px;*/
 
 }
 
