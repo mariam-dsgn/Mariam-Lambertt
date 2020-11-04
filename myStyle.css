@@ -6,18 +6,56 @@
 */
 
 
+
+
+  div.background {
+  background: url(../Mariam-Lambertt/My References/my terrain.gif) ;
+   /*background-size: cover;*/
+    height: 100px;
+    padding:0;
+    margin:0;
+  }
+
+ div.transbox {
+  margin: 30px;
+  background-color: #ffffff; 
+  border: 1px solid black;
+  opacity: 0.6;
+  width: 800px
+
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  opacity: 100%
+  color: #000000;
+}
+
+
+
+
 /*TITLE*/
 	h1{
-	font-size: 80px
+	 font-size: 40px;
+  font-weight: 700;
+  color: #18206fff;
+  letter-spacing: 0.25px;
+  padding-left: 40px
 	}
 
 
 /*SUBTITLE*/
 	h2{
-	font-size: 18px
+	 font-size: 19px;
+  font-weight: 700;
+  color: #18206fff;
+  letter-spacing: 0.25px;
+   padding-left: 40px
 	}
 
 /*MENU*/
+
 .menu button {
   background-color: #ffffffff; /* White background */
   border: 0px ; /* White border */
@@ -47,6 +85,39 @@
 
 
 
+/**----------MENU-ON-TOP--------------------------/
+/* The navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: right;
+
+  padding: 14px 25px;
+  text-decoration: none;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+/* Main content */
+.main {
+  margin-top: 30px; /* Add a top margin to avoid content overlay */
+}
+
+
 
 /*BODY*/
 body{
@@ -62,13 +133,22 @@ font-family: 'Peddana', serif;
 }
 
 h3{
-font-size: 28px
+  font-size: 28px;
+  font-weight: 700;
+  color: #18206fff;
+  letter-spacing: 0.25px;
 }
 h4{
-font-size: 20px
+  font-size: 20px;
+  font-weight: 700;
+  color: #18206fff;
+  letter-spacing: 0.25px;
 }
 p{
-font-size: 18px
+  font-size: 18px;
+  line-height: 25px;
+  color: #18206fff;
+  letter-spacing: 0.2px;
 }
 
 

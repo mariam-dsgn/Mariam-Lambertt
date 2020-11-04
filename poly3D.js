@@ -1,18 +1,37 @@
-let cols, rows; // columns. rowsS
+
+let cols, rows; // columns. rows
 let scl = 20; //scale
 	let w = 10000
-	let h = 800 
+	let h = 800
 
 
- function setup() {
- 	  var videoInput = createCapture(VIDEO);
-  videoInput.size(800, 600);
-  videoInput.position(0, 0);
+function setup(){
+createCanvas(600, 400, WEBGL)
+cols = w / scl  //number of colors is the width of my grid divided by the scale
+	rows = h / scl
 
 
-	let canvas = createCanvas(800, 600, WEBGL);
-	canvas.parent('p5container');
+}
+
+
+
+function draw() {
 	background(0)
+	// frameRate(10)
+	
+for (let y = 0; y < rows; y ++){
+	beginShape(TRIANGLE_STRIP);
+	for (let x = 0; x < cols; x++){
+		fill(0)
+		stroke(255)
+		lights()
+		vertex(x*scl, y*scl, random(-10,10));
+		vertex(x*scl, (y+1)*scl, random(-10,10));
+
+			// rect (x*scl, (y+1)*scl, scl, scl)
+		}
+	endShape();
+	}
 
 	//   ctracker = new clm.tracker();
  //  ctracker.init(pModel);
@@ -24,6 +43,9 @@ let scl = 20; //scale
 	// rows = h / scl
 	
 }
+
+
+
 
 // function draw() {
 // 	background(0)
