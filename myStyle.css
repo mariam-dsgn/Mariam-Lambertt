@@ -5,17 +5,28 @@
 --pale-silver: #deccccff;
 */
 
+@font-face {
+    font-family: 'polya_regular';
+    src: url('../My references/PolyaF/polya-webfont.woff2') format('woff2'),
+         url('../My references/PolyaF/polya-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 
 
 
+.polya{
 
-
+  font-family: 'Polya'
+}
 
 
 /*TITLE*/
 	h1{
-	 font-size: 46px;
+    font-family: 'Polya'
+	 font-size: 40px;
   font-weight: 700;
   color: #18206fff;
   letter-spacing: 0.25px;
@@ -157,7 +168,7 @@
   background-color: #ffffff; 
   padding:5%;
     opacity: 0;
-
+    
   width: 800px
 
 
