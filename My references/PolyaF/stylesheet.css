@@ -3,9 +3,9 @@
 
 
 @font-face {
-    font-family: 'polya_regular';
-    src: url('../My references/PolyaF/polya-webfont.woff2') format('woff2'),
-         url('../My references/PolyaF/polya-webfont.woff') format('woff');
+    font-family: 'polya_regularregular';
+    src: url('polya-webfont.woff2') format('woff2'),
+         url('polya-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 

@@ -6,40 +6,234 @@
 */
 
 @font-face {
-    font-family: 'polya_regular';
-    src: url('../My references/PolyaF/polya-webfont.woff2') format('woff2'),
-         url('../My references/PolyaF/polya-webfont.woff') format('woff');
+    font-family: 'polya_regularregular';
+    src: url('../Mariam-Lambertt/My references/PolyaF/polya-webfont.woff2') format('woff2'),
+         url('../Mariam-Lambertt/My references/PolyaF/polya-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: '29lt_adirregular';
+    src: url('../Mariam-Lambertt/My references/Adir/29ltadir-regular-webfont.woff2') format('woff2'),
+         url('../Mariam-Lambertt/My references/Adir/29ltadir-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 
 
+/* Banner */
+
+  #banner {
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    padding: 8em 4em 6em 4em;
+    min-height: 70vh;
+    background-image: url("../Mariam-Lambertt/My references/my terrain.gif");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 0;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+  }
+
+    #banner .inner {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    #banner h1 {
+      color: #ffffffff;
+      font-size: 7em;
+      font-weight: 600;
+   font-family: 'polya_regularregular';
+
+      margin: 0;
+    }
+
+      @media screen and (max-width: 980px) {
+
+        #banner h1 {
+          font-size: 5em;
+        }
+
+      }
+
+      @media screen and (max-width: 736px) {
+
+        #banner h1 {
+          font-size: 3em;
+        }
+
+      }
+
+    #banner p {
+        font-family: '29lt_adirregular';
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+
+      @media screen and (max-width: 980px) {
+
+        #banner p {
+          font-size: 1.5em;
+        }
+
+      }
+
+      @media screen and (max-width: 480px) {
+
+        #banner p {
+          font-size: 1.25em;
+        }
+
+      }
+
+    #banner a {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+      border-bottom: 1px dotted;
+    }
+
+      #banner a:hover {
+        color: #FFF;
+        border: none;
+      }
+
+    #banner .more {
+      background-image: url("images/arrow.svg");
+      background-position: center 1.35em;
+      background-repeat: no-repeat;
+      background-size: auto;
+      border: 1px solid #fff;
+      border-radius: 100%;
+      color: rgba(255, 255, 255, 0.75);
+      display: block;
+      height: 4em;
+      text-indent: 4em;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 4em;
+      z-index: 2;
+      margin: 0 auto 2em auto;
+    }
+
+      #banner .more:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        border: 1px solid #fff;
+        color: #FFF;
+      }
+
+    #banner video {
+      -moz-transform: translateX(50%) translateY(50%);
+      -webkit-transform: translateX(50%) translateY(50%);
+      -ms-transform: translateX(50%) translateY(50%);
+      transform: translateX(50%) translateY(50%);
+      position: absolute;
+      bottom: 50%;
+      right: 50%;
+      width: auto;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
+      overflow: hidden;
+    }
+
+    #banner:before {
+      -moz-transition: opacity 3s ease;
+      -webkit-transition: opacity 3s ease;
+      -ms-transition: opacity 3s ease;
+      transition: opacity 3s ease;
+      -moz-transition-delay: 1s;
+      -webkit-transition-delay: 1s;
+      -ms-transition-delay: 1s;
+      transition-delay: 1s;
+      content: '';
+      background-color: #42424f;
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0.45;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
+
+    @media screen and (max-width: 1280px) {
+
+      #banner video {
+        display: none;
+      }
+
+    }
+
+    @media screen and (max-width: 980px) {
+
+      #banner br {
+        display: none;
+      }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+      #banner {
+        min-height: 0;
+        padding: 6em 2em 4em 2em;
+      }
+
+        #banner br {
+          display: none;
+        }
+
+    }
+
+    body.is-loading #banner:before {
+      opacity: 1;
+    }
 
 
-.polya{
 
-  font-family: 'Polya'
-}
 
 
 /*TITLE*/
 	h1{
-    font-family: 'Polya'
-	 font-size: 40px;
-  font-weight: 700;
-  color: #18206fff;
-  letter-spacing: 0.25px;
-  padding-left: 40px
+  font-family: 'polya_regularregular';
+	 font-size: 60px;
+
+  font-weight: normal;
+  font-style: normal;
+  /*color: #18206fff;*/
+
+/*  letter-spacing: 0.25px;
+*/  padding-left: 40px
 	}
 
 
 /*SUBTITLE*/
 	h2{
+     font-family: '29lt_adirregular';
 	 font-size: 19px;
-  font-weight: 700;
-  color: #18206fff;
-  letter-spacing: 0.25px;
+  font-weight: normal;
+ /* color: #18206fff;
+*/  letter-spacing: 0.25px;
    padding-left: 40px
 	}
 
@@ -71,6 +265,8 @@
   background-color: #ffffffff;
   /*color: #ffffffff*/
 }
+
+
 
 
 
@@ -220,8 +416,8 @@ div.transbox p {
 
 body{
 
-font-family: 'Peddana', serif;
-	background: #ffffffff;
+font-family: 'adir', sans-serif;
+background: #ffffffff;
 		color: #000000ff
 
 
@@ -232,30 +428,27 @@ font-family: 'Peddana', serif;
 }
 
 h3{
+      font-family: '29lt_adirregular';
   font-size: 30px;
   font-weight: 700;
   color: #18206fff;
   letter-spacing: 0.25px;
 }
 h4{
+      font-family: '29lt_adirregular';
   font-size: 20px;
   font-weight: 700;
   color: #18206fff;
   letter-spacing: 0.25px;
 }
 p{
+  font-family: '29lt_adirregular';
   font-size: 18px;
   line-height: 25px;
-  color: #18206fff;
+  color: #000000ff;
   letter-spacing: 0.2px;
 }
-p1{
-  font-size: 14px;
-  line-height: 25px;
-  text-align: center;
-  color: #353535;
-  letter-spacing: 0.2px;
-}
+
 
 
 
@@ -401,10 +594,12 @@ margin-right: 200px
 
 
 h5{
+      font-family: '29lt_adirregular';
   font-size: 36px
 }
 
 h6{
+      font-family: '29lt_adirregular';
     font-size: 20px
 }
 
@@ -550,3 +745,63 @@ width: 500px
   background: #ddd;
   margin-top: 20px;
 }
+
+
+
+/* Footer */
+
+h7{
+    font-family: '29lt_adirregular';
+    color: #ffffffff;
+   font-size: 20px
+}
+h8{
+    font-family: '29lt_adirregular';
+    color: #ffffffff;
+   font-size: 20px
+}
+
+  #footer {
+    padding: 4em 0 2em 0;
+    background-color: #1b1b1f;
+    text-align: center;
+  }
+
+    #footer .inner {
+       color: #ffffffff;
+      width: 50%;
+      margin: 0 auto;
+    }
+
+      @media screen and (max-width: 980px) {
+
+        #footer .inner {
+     
+          width: 75%;
+        }
+
+      }
+
+      @media screen and (max-width: 480px) {
+
+        #footer .inner {
+          width: 90%;
+        }
+
+      }
+
+    #footer .copyright {
+      color: #ffffffff;
+      font-size: 0.9em;
+      margin: 0 0 2em 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 736px) {
+
+      #footer {
+        padding: 3em 0 1em 0;
+      }
+
+    }
