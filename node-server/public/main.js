@@ -2,6 +2,10 @@ console.log('vr-sketch.js')
 
 import { VRButton } from './js/VRButton.js';
 
+console.log(VRButton)
+
+
+
 var scene = new THREE.Scene();
 // scene.background = new THREE.Color( 0x505050 );
 
@@ -29,24 +33,27 @@ var ambientLight = new THREE.AmbientLight(0xffffff, 5.0) //color, intensity
 scene.add(ambientLight)
 
 
-var VR = new VRButton.createButton(renderer)
+var VR = VRButton.createButton(renderer)
+document.body.appendChild( VRButton.createButton( renderer ) );
 
 
-// //create a shape
-// var geometry = new THREE.BoxGeometry(10000,10000,10000)//x, y, z axis
-// // var geometry = new THREE.SphereGeometry(1,1,1)//x, y, z axis
-// var material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: false } );
-
-
-
-// var cube = new THREE.Mesh ( geometry, material )
-// scene.add( cube );
+//create a shape
+var geometry = new THREE.BoxGeometry(10000,10000,10000)//x, y, z axis
+// var geometry = new THREE.SphereGeometry(1,1,1)//x, y, z axis
+var material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: false } );
 
 
 
-// 		var geomet = new THREE.SphereGeometry(5,35,35)//x, y, z axis
-// // var geometry = new THREE.SphereGeometry(1,1,1)//x, y, z axis
-// var material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true } );
+var cube = new THREE.Mesh ( geometry, material )
+scene.add( cube );
+
+
+
+var geomet = new THREE.SphereGeometry(5,35,35)//x, y, z axis
+// var geometry = new THREE.SphereGeometry(1,1,1)//x, y, z axis
+var material = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true } );
+
+
 // var sphere = new THREE.Mesh ( geomet, material )
 // scene.add( sphere );
 
