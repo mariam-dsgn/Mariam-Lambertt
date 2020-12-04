@@ -2,7 +2,7 @@ const http = require( 'http')
 const fs = require ('fs')
 const port = 3000
 
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 
 const server = http.createServer(function(req, res) {
