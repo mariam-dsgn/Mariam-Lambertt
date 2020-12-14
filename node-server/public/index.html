@@ -10,14 +10,22 @@
 
 </head>
 <body>
+		<!-- <script src="./waves-master/shared.js"></script>
+        <script src="./waves-master/simulation.js"></script>
+        <script src="./waves-master/ui.js"></script>
+        <script src="./waves-master/waves.js"></script> -->
+
+
 	<script src="js/three.js"></script>
 	<!-- <script src="js/three.min.js"></script> -->
 	<script src="js/OrbitControls.js"></script>
 	<script type="module"> 
 		import { VRButton } from './js/VRButton.js';
+		import * as THREE from './js/three.module.js';
+		// import { OrbitControls } from './js/OrbitControls.js';
 		
 		var scene = new THREE.Scene();
-			// scene.background = new THREE.Color( 0x505050 );
+			scene.background = new THREE.Color( 0x505050 );
 
 		var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -37,14 +45,19 @@
 		})
 
 		//Control orbit: check mor kind of controls(like fly) on threjs.org
-		var controls = new THREE.OrbitControls( camera, renderer.domElement)
+
+				// controls = new OrbitControls(camera, renderer.domElement)
+
 
 		//Lights
 		var ambientLight = new THREE.AmbientLight( 0xffffff, 5.0)//color, intensity
 		scene.add( ambientLight)
 
 
-			var VR = new VRButton.createButton( renderer )
+			// var VR = new VRButton.createButton( renderer )
+
+
+				document.body.appendChild( VRButton.createButton( renderer ) );
 		
 
 		// //create a shape
@@ -68,12 +81,14 @@
 
 
 		let materialArray = []
-		let texture_ft = new THREE.TextureLoader().load('./models/front.jpg');
-		let texture_bk = new THREE.TextureLoader().load('./models/back.jpg');
-		let texture_up = new THREE.TextureLoader().load('./models/top.jpg');
-		let texture_dn = new THREE.TextureLoader().load('./models/cocoa_dn.jpg');
+
+		let texture_bk = new THREE.TextureLoader().load('./models/front.jpg');
+		let texture_up = new THREE.TextureLoader().load('./models/top8.jpg');
+		let texture_ft = new THREE.TextureLoader().load('./models/back.jpg');
+		let texture_dn = new THREE.TextureLoader().load('./models/down.jpg');
 		let texture_rt = new THREE.TextureLoader().load('./models/right.jpg');
 		let texture_lf = new THREE.TextureLoader().load('./models/left.jpg');
+		
 		
 
 
@@ -124,6 +139,7 @@
 		{
 			requestAnimationFrame(animate)
 			// update();
+			// controls.update(); // only required if controls.enableDamping = true, or if controls.autoRotate = true
 			render()
 
 		}
@@ -131,6 +147,6 @@
 		// animate();
 
 
-	</script>
+	</script>        
 </body>
 </html>
