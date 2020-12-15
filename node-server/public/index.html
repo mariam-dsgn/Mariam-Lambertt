@@ -18,7 +18,7 @@
 
 	<script src="js/three.js"></script>
 	<!-- <script src="js/three.min.js"></script> -->
-	<script src="js/OrbitControls.js"></script>
+	<!-- <script src="js/OrbitControls.js"></script> -->
 	<!-- <script src="js/GLTFLoader.js"></script> -->
 	<script type="module"> 
 		import { VRButton } from './js/VRButton.js';
@@ -106,7 +106,7 @@
 		
 
 
-		materialArray.push(new THREE.MeshLambertMaterial({map: texture_ft}));//emissive texture
+		materialArray.push(new THREE.MeshBasicMaterial({map: texture_ft}));//emissive texture
 		materialArray.push(new THREE.MeshBasicMaterial({map: texture_bk}))
 		materialArray.push(new THREE.MeshBasicMaterial({map: texture_up}))
 		materialArray.push(new THREE.MeshBasicMaterial({map: texture_dn}))
